@@ -27,7 +27,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 # CUSTOM GEMS
-
+gem 'jquery-rails'
 
 group :production do
   gem 'pg', '~> 0.20'
