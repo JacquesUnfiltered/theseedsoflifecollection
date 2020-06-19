@@ -1,3 +1,38 @@
-// Place all the styles related to the simple_pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+//////////////// STRIKE THROUGH FOR LINKS ///////////////
+
+a.strikethrough {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    line-height: normal;
+    vertical-align: text-bottom;
+    border: none;
+    padding: 0;
+    color: #000;
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        background: #000;
+        height: 1px;
+        transform: translateX(-110%);
+        transition: transform 0.3s ease-in-out;
+    }
+    &.mouseenter {
+        color: #000;
+        &:after {
+            transform: translateX(0);
+        }
+    }
+    &.mouseleave:after {
+        transform: translateX(110%);
+    }
+    &.no-transition:after {
+        transition: none;
+    }
+}
+
+////////////////////////////////////////////////////////
