@@ -60,3 +60,24 @@ h1, h2, h3, h4, h5, h6 {
 .fa-github:hover {
   color: #ecc5ac;
 }
+
+.fa-envelope-o:hover {
+  color: #bf4049;
+}
+
+.contact-form-input, .contact-form-input:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+footer a {
+  color: #fff;
+}
+
+/*bigger modal*/
+@media (min-width: 768px) {
+  .modal-xl {
+    width: 90%;
+    max-width: 860px;
+  }
+}

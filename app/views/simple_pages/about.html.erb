@@ -2,17 +2,44 @@
   <div class="container">
     <div class="row"> <!-- row 1 -->
       <div class="col-sm-12 col-md-6">
-        <%#= image_tag ('baby.png', class: 'img-fluid') %>
+        <%= image_tag('bluedrink.jpg', class: 'img-fluid') %>
       </div>
-      <div class="col-sm-12 col-md-6">
+      <div class="col-sm-12 col-md-6 align-self-center">
         <h1>Hi, I'm Jacques. A goal driven optimist based in Bloemfontein, South Africa.</h1>
         <p class="lead">The intention of this website is to showcase some of my work and act as an online résumé.</p>
-        <p>You can download a copy of my résumé here...</p>
-        <button class="btn btn-outline-info mb-5 mr-2">CV - Jacques le Roux</button>
-        <button class="btn btn-outline-success mb-5">Just View It...</button>
+        <p class="">You can download a copy of my résumé here...</p>
+        <button class="btn btn-outline-info mr-2">CV - Jacques le Roux</button>
+        <button class="btn btn-outline-success" data-toggle="modal" data-target="#cv-modal">Just View It...</button>
+
+        <!-- The Modal -->
+        <div class="modal fade" id="cv-modal">
+          <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">CV - Jacques le Roux</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+
+              <!-- Modal Body -->
+              <div class="modal-body">
+                <%= image_tag('cv-jacques.png', alt: 'cv-Jacques', class: 'img-fluid') %>
+              </div>
+
+              <!-- Modal Footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+
+            </div>
+          </div>
+        </div> <!-- end modal -->
         <br>
       </div>
     </div> <!-- end row 1 -->
+    <br>
+    <br>
     <h1>Career Skills</h1>
     <div class="row"> <!-- row 2 -->
       <div class="col-sm-12 col-md-6">

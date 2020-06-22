@@ -5,7 +5,7 @@
 
 $( document ).on('turbolinks:load', function() {
 // Strikethrough
-$('a').addClass('strikethrough').hover(
+$('.navi-link').addClass('strikethrough').hover(
     (e) => $(e.target).stop().addClass('mouseenter'),
     (e) => {
         $(e.target).stop().removeClass('mouseenter');
