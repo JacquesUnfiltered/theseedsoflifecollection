@@ -8,6 +8,15 @@ class SimplePagesController < ApplicationController
   def contact
   end
 
+  def download_cv
+  send_file(
+    "#{Rails.root}/public/cv-jacques-le-roux.pdf",
+    filename: "CV - Jacques le Roux.pdf",
+    type: "application/pdf"
+  )
+  end
+
+
   # def thank_you
   #   @name = params[:name]
   #   @email = params[:email]
