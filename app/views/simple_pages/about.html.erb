@@ -4,16 +4,16 @@
       <div class="col-sm-12 col-md-6 animate__animated animate__backInLeft">
         <%= image_tag('about-img.png', class: 'img-fluid') %>
       </div>
-      <div class="col-sm-12 col-md-6 align-self-center animate__animated animate__backInUp">
+      <div class="col-sm-12 col-md-6 align-self-center">
         <h1>Hi, I'm Jacques. A goal driven optimist based in Bloemfontein, South Africa.</h1>
         <p class="lead">The intention of this website is to showcase some of my work and act as an online résumé.</p>
         <p class="">You can download a copy of my résumé here...</p>
         <%= link_to simple_pages_download_cv_url do %>
-        <button class="btn btn-outline-info mr-2">CV - Jacques le Roux</button>
+        <button class="btn btn-outline-info mr-2 animate__animated animate__backInUp">CV - Jacques le Roux</button>
         <% end -%>
 
         <!-- Modal Button -->
-        <button class="btn btn-outline-success" data-toggle="modal" data-target="#cv-modal">Just View It...</button>
+        <button class="btn btn-outline-success animate__animated animate__backInUp" data-toggle="modal" data-target="#cv-modal">Just View It...</button>
 
         <!-- The Modal -->
         <div class="modal fade" id="cv-modal">
