@@ -3,8 +3,9 @@
 
   <%= render 'layouts/head' %>
 
-  <body>
+  <body class="d-flex flex-column min-vh-100">
     <%= render 'layouts/nav' %>
+    <div class="mb-8"></div>
     <%= yield %>
     <%= render 'layouts/footer' %>
   </body>

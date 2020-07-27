@@ -14,18 +14,23 @@
  *= require_self
  */
 
-body {
- font-family: 'Dosis', sans-serif;
- font-weight: 400;
- color: #000;
-}
+ body, html {
+   font-family: 'Cutive Mono', monospace;
+   font-weight: 400;
+   color: #000;
+   background-image: url('background-image.png');
+   height: 100%;
+   background-position: center;
+   background-repeat: none;
+   background-size: cover;
+ }
 
-h1, h2, h3, h4, h5, h6 {
- font-family: 'Titillium Web', sans-serif;
- color: 000;
-}
+ h1, h2, h3, h4, h5, h6 {
+   font-family: 'Playfair Display', serif;
+   color: 000;
+ }
 
-.navbar-brand {
+ .navbar-brand {
   margin-right: 120px;
 }
 
@@ -49,16 +54,16 @@ h1, h2, h3, h4, h5, h6 {
   color: #f70000;
 }
 
+.fa-instagram:hover {
+  color: #b926a8;
+}
+
 .fa-facebook:hover {
   color: #4064ac;
 }
 
 .fa-whatsapp:hover {
   color: #2fcd4b;
-}
-
-.fa-github:hover {
-  color: #ecc5ac;
 }
 
 .fa-envelope-o:hover {
@@ -74,10 +79,12 @@ footer a {
   color: #fff;
 }
 
-/*bigger modal*/
-@media (min-width: 768px) {
-  .modal-xl {
-    width: 90%;
-    max-width: 860px;
-  }
+.mb-8 {
+  margin-bottom: 8rem;
 }
+
+.pt-7{
+  padding-top: 7rem;
+}
+
+/*******************INDEX*************/
