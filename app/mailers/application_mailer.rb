@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'hello@theseedsoflifecollection.co.za'
+  default from: 'example@email.com'
   layout 'mailer'
 end
