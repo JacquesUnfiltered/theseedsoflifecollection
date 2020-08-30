@@ -1,0 +1,43 @@
+<div class="background">
+  <div class="container">
+    <div class="row"> <!-- row 1 -->
+      <div class="col-12 text-center">
+        <br>
+        <h1><%= @plant_guide.name %></h1>
+        <h3><%= @plant_guide.science_title %></h3>
+      </div>
+    </div> <!-- end row 1 -->
+    <br>
+    <div class="row"> <!-- row 2 -->
+      <div class="col-6">
+        <div class="pull-right">
+          <p><i class="fa fa-calendar" aria-hidden="true"></i> Planting Season | <%= @plant_guide.season %></p>
+          <p><i class="fa fa-sun-o" aria-hidden="true"></i> Luminosity Preference | <%= @plant_guide.sun %></p>
+          <p><i class="fa fa-tint" aria-hidden="true"></i> Water Requirement | <%= @plant_guide.water %></p>
+          <p><i class="fa fa-long-arrow-down" aria-hidden="true"></i> Planting Depth | <%= @plant_guide.depth %></p>
+          <p><i class="fa fa-arrows-v" aria-hidden="true"></i> Planting Distance | <%= @plant_guide.distance %></p>
+          <p><i class="fa fa-flask" aria-hidden="true"></i> Soil pH Preference | <%= @plant_guide.ph %></p>
+        </div>
+      </div>
+      <div class="col-6">
+
+        <%= image_tag (@plant_guide.image), class: 'img-fluid img-thumbnail' %>
+
+      </div>
+    </div> <!-- end row 2 -->
+    <br>
+    <div class="row"> <!-- row 3 -->
+      <div class="col">
+        <h3>Tips and Tricks</h3>
+        <%= @plant_guide.tips %>
+      </div>
+      <div class="col">
+        <h3>Nutrition & Benefits</h3>
+        <%= @plant_guide.benefits %>
+      </div>
+    </div> <!-- end row 3 -->
+  </div>
+</div>
+<%= link_to 'Destroy', @plant_guide, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<%= link_to 'Edit', edit_plant_guide_path(@plant_guide) %> |
+<%= link_to 'Back', plant_guides_path %>

@@ -12,20 +12,26 @@
       <div class="col-6">
         <%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
         <div class="row">
-          <div class="form-group">
-            <%= form.label :name %>
-            <%= form.text_field :name, class: "form-control", placeholder: "Enter Name" %>
+          <div class="col-12">
+            <div class="form-group">
+              <%= form.label :name, class: "sr-only" %>
+              <%= form.text_field :name, class: "form-control", placeholder: "Enter Name" %>
+            </div>
           </div>
-          <div class="form-group">
-            <%= form.label :email %>
-            <%= form.text_field :email, class: "form-control", placeholder: "Enter Email" %>
+          <div class="col-12">
+            <div class="form-group">
+              <%= form.label :email, class: "sr-only" %>
+              <%= form.text_field :email, class: "form-control", placeholder: "Enter Email" %>
+            </div>
           </div>
-          <div class="form-group">
-            <%= form.label :message %>
-            <%= form.text_area :message, class: "form-control", placeholder: "Enter Message", rows: 5 %>
+          <div class="col-12">
+            <div class="form-group">
+              <%= form.label :message, class: "sr-only" %>
+              <%= form.text_area :message, class: "form-control", placeholder: "Enter Message", rows: 5 %>
+            </div>
           </div>
         </div>
-        <%= form.submit "Send", class: "form_label" %>
+        <%= form.submit "Send", class: "form_label mb-4" %>
         <% end %>
       </div>
     </div> <!-- end row-->

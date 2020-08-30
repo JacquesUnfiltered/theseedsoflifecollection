@@ -1,0 +1,72 @@
+<%= form_with(model: plant_guide, local: true) do |form| %>
+  <% if plant_guide.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(plant_guide.errors.count, "error") %> prohibited this plant_guide from being saved:</h2>
+
+      <ul>
+        <% plant_guide.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :science_title %>
+    <%= form.text_field :science_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image%>
+    <%= form.text_field :image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :season %>
+    <%= form.text_field :season %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sun %>
+    <%= form.text_field :sun %>
+  </div>
+
+  <div class="field">
+    <%= form.label :water %>
+    <%= form.text_field :water %>
+  </div>
+
+  <div class="field">
+    <%= form.label :depth %>
+    <%= form.text_field :depth %>
+  </div>
+
+  <div class="field">
+    <%= form.label :distance %>
+    <%= form.text_field :distance %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ph %>
+    <%= form.text_field :ph, step: :any %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tips %>
+    <%= form.text_area :tips %>
+  </div>
+
+  <div class="field">
+    <%= form.label :benefits %>
+    <%= form.text_area :benefits %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

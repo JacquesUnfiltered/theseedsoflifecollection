@@ -1,0 +1,2 @@
+class PlantGuide < ApplicationRecord
+end
