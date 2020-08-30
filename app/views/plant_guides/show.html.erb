@@ -1,16 +1,16 @@
 <div class="background">
-  <div class="container">
+  <div class="container mb-3">
     <div class="row"> <!-- row 1 -->
       <div class="col-12 text-center">
         <br>
-        <h1><%= @plant_guide.name %></h1>
-        <h3><%= @plant_guide.science_title %></h3>
+        <h3><%= @plant_guide.name %></h3>
+        <h4><%= @plant_guide.science_title %></h4>
       </div>
     </div> <!-- end row 1 -->
     <br>
     <div class="row"> <!-- row 2 -->
       <div class="col-6">
-        <div class="pull-right">
+        <div class="pull-left">
           <p><i class="fa fa-calendar" aria-hidden="true"></i> Planting Season | <%= @plant_guide.season %></p>
           <p><i class="fa fa-sun-o" aria-hidden="true"></i> Luminosity Preference | <%= @plant_guide.sun %></p>
           <p><i class="fa fa-tint" aria-hidden="true"></i> Water Requirement | <%= @plant_guide.water %></p>
@@ -22,7 +22,8 @@
         </div>
       </div>
       <div class="col-6">
-        <%= image_tag (@plant_guide.image), class: 'img-fluid img-thumbnail', size: '310x310' %>
+        <%#= image_tag (@plant_guide.image), class: 'img-fluid img-thumbnail', size: '310x310' %>
+        <%= wicked_pdf_image_tag (@plant_guide.image), class: 'img-fluid img-thumbnail', size: '310x310' %>
       </div>
     </div> <!-- end row 2 -->
     <br>
@@ -40,7 +41,7 @@
 </div>
 
 <% if user_signed_in? %>
-  <%= link_to 'Destroy', @plant_guide, method: :delete, data: { confirm: 'Are you sure?' } %> |
-  <%= link_to 'Edit', edit_plant_guide_path(@plant_guide) %> |
-  <%= link_to 'Back', plant_guides_path %>
+<%= link_to 'Destroy', @plant_guide, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<%= link_to 'Edit', edit_plant_guide_path(@plant_guide) %> |
+<%= link_to 'Back', plant_guides_path %>
 <% end -%>

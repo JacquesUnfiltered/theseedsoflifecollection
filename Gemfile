@@ -29,6 +29,8 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # CUSTOM GEMS
 gem 'jquery-rails'
 gem 'devise'
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
 
 group :production do
   gem 'pg', '~> 0.20'

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Plant Guides</title>
+    <%= stylesheet_link_tag "https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" %>
+    <%= wicked_pdf_stylesheet_link_tag 'dashboard', media: 'all', 'data-turbolinks-track' => true %>
+    <%= wicked_pdf_stylesheet_link_tag "plant_guides" %>
+</head>
+<body>
+    <%= yield %>
+</body>
+</html>

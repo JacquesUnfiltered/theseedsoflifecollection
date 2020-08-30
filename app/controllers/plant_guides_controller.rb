@@ -10,6 +10,21 @@ class PlantGuidesController < ApplicationController
   # GET /plant_guides/1
   # GET /plant_guides/1.json
   def show
+    @plant_guide = PlantGuide.find(params[:id])
+
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: "#{@plant_guide.id}",
+        page_size: 'A4',
+        template: "plant_guides/show.html.erb",
+        layout: "pdf.html.erb",
+        orientation: "Portrait",
+        lowquality: true,
+        zoom: 1,
+        dpi: 75
+      end
+    end
   end
 
   # GET /plant_guides/new
@@ -71,4 +86,4 @@ class PlantGuidesController < ApplicationController
     def plant_guide_params
       params.require(:plant_guide).permit(:name, :science_title, :image, :season, :sun, :water, :depth, :distance, :ph, :germination, :harvest, :tips, :benefits)
     end
-end
+  end
