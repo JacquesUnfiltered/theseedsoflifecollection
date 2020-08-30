@@ -21,6 +21,9 @@
            <p>&copy; <%= Time.current.year %> The Seeds of Life Collection.</p>
          </div>
        </div>
+       <% if user_signed_in? %>
+          <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+        <% end -%>
      </div>
    </footer>
  </div>

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resources :users
   resources :plant_guides
   get 'simple_pages/index'
   get 'simple_pages/about'

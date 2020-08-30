@@ -110,6 +110,9 @@ Rails.application.configure do
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
   
+  #Devise dynamic links that show up inside emails from your development environment generate the right URLs.
+  config.action_mailer.default_url_options = { host: 'theseedsoflifecollection.herokuapp.com' }
+
   #Config for Sendgrid
   ActionMailer::Base.smtp_settings = {
   address: 'smtp.sendgrid.net',

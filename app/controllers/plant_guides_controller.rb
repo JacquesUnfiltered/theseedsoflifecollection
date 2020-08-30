@@ -69,6 +69,6 @@ class PlantGuidesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def plant_guide_params
-      params.require(:plant_guide).permit(:name, :science_title, :image, :season, :sun, :water, :depth, :distance, :ph, :tips, :benefits)
+      params.require(:plant_guide).permit(:name, :science_title, :image, :season, :sun, :water, :depth, :distance, :ph, :germination, :harvest, :tips, :benefits)
     end
 end

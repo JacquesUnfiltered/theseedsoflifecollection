@@ -1,12 +1,12 @@
-<div class="conteiner">
+<div class="container mb-3">
   <div class="text-center">
-    <h1>Plants</h1>
+    <h3>Plants</h3>
+    <hr>
     <div class="row">
       <% @plant_guides.each do |plant_guide| %>
       <div class="col">
         <div class="index-plant">
-          <h4 class="plant-name"><%= plant_guide.name %></h4>
-          <h5 class="plant-title"><%= plant_guide.science_title %></h5>
+          <h6><%= plant_guide.name %></h6>
           <%= link_to image_tag(plant_guide.image, class: 'img-fluid', size: '200x200'), plant_guide %>
         </div>
       </div>
@@ -14,4 +14,7 @@
     </div>
   </div>
 </div>
-<%= link_to 'New Plant Guide', new_plant_guide_path %>
+
+<% if user_signed_in? %>
+  <%= link_to 'New Plant Guide', new_plant_guide_path %>
+<% end -%>
