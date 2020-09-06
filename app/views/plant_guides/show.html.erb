@@ -22,7 +22,6 @@
         </div>
       </div>
       <div class="col-6">
-        <%#= image_tag (@plant_guide.image), class: 'img-fluid img-thumbnail', size: '310x310' %>
         <%= wicked_pdf_image_tag (@plant_guide.image), class: 'img-fluid img-thumbnail', size: '310x310' %>
       </div>
     </div> <!-- end row 2 -->
@@ -30,11 +29,11 @@
     <div class="row"> <!-- row 3 -->
       <div class="col">
         <h3>Tips and Tricks</h3>
-        <%= @plant_guide.tips %>
+        <%= @plant_guide.tips.html_safe %>
       </div>
       <div class="col">
         <h3>Nutrition & Benefits</h3>
-        <%= @plant_guide.benefits %>
+        <%= @plant_guide.benefits.html_safe %>
       </div>
     </div> <!-- end row 3 -->
   </div>

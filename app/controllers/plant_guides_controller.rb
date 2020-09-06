@@ -15,7 +15,7 @@ class PlantGuidesController < ApplicationController
     respond_to do |format|
       format.html
       format.pdf do
-        render pdf: "#{@plant_guide.id}",
+        render pdf: "#{@plant_guide.name}",
         page_size: 'A4',
         template: "plant_guides/show.html.erb",
         layout: "pdf.html.erb",
