@@ -4,7 +4,7 @@
     <hr>
     <div class="row">
       <% @plant_guides.each do |plant_guide| %>
-      <div class="col">
+      <div class="col-xs-12 col-sm-12 col-md-3">
         <div class="index-plant">
           <h6><%= plant_guide.name %></h6>
           <%= link_to image_tag(plant_guide.image, class: 'img-fluid', size: '200x200'), plant_guide %>
