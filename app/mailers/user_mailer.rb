@@ -3,7 +3,7 @@ class UserMailer < ActionMailer::Base
 
   def contact_form(email, name, message)
     @message = message
-    mail(from: email, 
+    mail(from: 'hello@theseedsoflifecollection.co.za', 
         to: 'hello@theseedsoflifecollection.co.za', 
         subject: "A new contact form message from #{name}")
   end
