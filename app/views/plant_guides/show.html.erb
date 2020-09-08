@@ -9,8 +9,11 @@
     </div> <!-- end row 1 -->
     <br>
     <div class="row"> <!-- row 2 -->
-      <div class="col-6">
-        <div class="pull-left">
+      <div class="col-sm-12 col-md-6">
+        <%= wicked_pdf_image_tag (@plant_guide.image), class: 'img-fluid img-thumbnail plant-image', size: '310x310' %>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <div class="pull-right">
           <p><i class="fa fa-calendar" aria-hidden="true"></i> Planting Season | <%= @plant_guide.season %></p>
           <p><i class="fa fa-sun-o" aria-hidden="true"></i> Luminosity Preference | <%= @plant_guide.sun %></p>
           <p><i class="fa fa-tint" aria-hidden="true"></i> Water Requirement | <%= @plant_guide.water %></p>
@@ -20,9 +23,6 @@
           <p><i class="fa fa-leaf" aria-hidden="true"></i> Time Till Germination | <%= @plant_guide.germination %></p>
           <p><i class="fa fa-tree" aria-hidden="true"></i> Time Till Harvest | <%= @plant_guide.harvest %></p>
         </div>
-      </div>
-      <div class="col-6">
-        <%= wicked_pdf_image_tag (@plant_guide.image), class: 'img-fluid img-thumbnail plant-image', size: '310x310' %>
       </div>
     </div> <!-- end row 2 -->
     <br>
