@@ -7,6 +7,6 @@ class UserMailer < ActionMailer::Base
     @name = name
     mail(from: 'hello@theseedsoflifecollection.co.za', 
         to: 'hello@theseedsoflifecollection.co.za', 
-        subject: "A new contact form message from #{name}")
+        subject: "A new contact form message from #{email}")
   end
 end
