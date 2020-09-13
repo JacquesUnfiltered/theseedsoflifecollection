@@ -20,6 +20,7 @@ class PlantGuidesController < ApplicationController
         template: "plant_guides/show.html.erb",
         layout: "pdf.html.erb",
         orientation: "Portrait",
+        viewport_size: '1280x1024',
         lowquality: true,
         zoom: 1,
         dpi: 75
