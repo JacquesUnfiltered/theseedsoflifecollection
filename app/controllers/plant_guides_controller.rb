@@ -19,16 +19,34 @@ class PlantGuidesController < ApplicationController
         page_size: 'A4',
         template: "plant_guides/show.html.erb",
         layout: "pdf.html.erb",
+        # show_as_html: true,
         orientation: "Portrait",
         viewport_size: '1280x1024',
         lowquality: true,
         zoom: 1,
         dpi: 75,
-        disposition: 'attachment',
-        show_as_html: true
+        disposition: 'attachment'
       end
     end
   end
+
+
+# def save
+#   pdf = WickedPdf.new.pdf_from_string(
+#                         render_to_string(
+#                           template: "plant_guides/show.html.erb",
+#                           layout: "pdf.html.erb",
+#                           page_size: 'A4',
+#                           orientation: "Portrait",
+#                           viewport_size: '1280x1024',
+#                           lowquality: true,
+#                           zoom: 1,
+#                           dpi: 75))
+#   send_data(pdf,
+#             filename: "#{@plant_guide.name}.pdf",
+#             type: 'application/pdf',
+#             disposition: 'attachment') 
+# end 
 
   # GET /plant_guides/new
   def new
