@@ -24,7 +24,8 @@ class PlantGuidesController < ApplicationController
         lowquality: true,
         zoom: 1,
         dpi: 75,
-        disposition: 'attachment'
+        disposition: 'attachment',
+        show_as_html: true
       end
     end
   end
