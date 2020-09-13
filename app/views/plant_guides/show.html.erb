@@ -9,11 +9,11 @@
     </div> <!-- end row 1 -->
     <br>
     <div class="row"> <!-- row 2 -->
-      <div class="col-sm-12 col-md-6">
-        <%= wicked_pdf_image_tag (@plant_guide.image), class: 'img-fluid img-thumbnail plant-image', size: '310x310' %>
+      <div class="col-sm-12 col-md-6 col-lg-6 mx-auto">
+        <%= wicked_pdf_image_tag (@plant_guide.image), class: 'img-fluid img-thumbnail plant-image d-block mx-auto' %>
       </div>
-      <div class="col-sm-12 col-md-6">
-        <div class="pull-right">
+      <div class="col-sm-12 col-md-6 col-lg-6">
+        <div class="quick-info">
           <p><i class="fa fa-calendar" aria-hidden="true"></i> Planting Season | <%= @plant_guide.season %></p>
           <p><i class="fa fa-sun-o" aria-hidden="true"></i> Luminosity Preference | <%= @plant_guide.sun %></p>
           <p><i class="fa fa-tint" aria-hidden="true"></i> Water Requirement | <%= @plant_guide.water %></p>
@@ -29,11 +29,11 @@
     <div class="row"> <!-- row 3 -->
       <div class="col">
         <h3>Tips and Tricks</h3>
-        <%= @plant_guide.tips.html_safe %>
+        <p><%= @plant_guide.tips.html_safe %></p>
       </div>
       <div class="col">
         <h3>Nutrition & Benefits</h3>
-        <%= @plant_guide.benefits.html_safe %>
+        <p><%= @plant_guide.benefits.html_safe %></p>
       </div>
     </div> <!-- end row 3 -->
   </div>
