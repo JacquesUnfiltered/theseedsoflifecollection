@@ -4,7 +4,12 @@ class PlantGuidesController < ApplicationController
   # GET /plant_guides
   # GET /plant_guides.json
   def index
-    @plant_guides = PlantGuide.all
+    if params[:q]
+      search_term = params[:q]
+      @plant_guides = PlantGuide.search(search_term)
+    else
+      @plant_guides = PlantGuide.all
+    end
   end
 
   # GET /plant_guides/1

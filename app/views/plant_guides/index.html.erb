@@ -1,6 +1,24 @@
 <div class="container mb-3">
   <div class="text-center">
     <h3>Plants</h3>
+    <div class="row justify-content-center">
+      <div class="col-5">
+        <%= form_with(url: plant_guides_path, method: 'get', local: true, class: 'card card-sm') do |form| %>
+        <div class="card-body row no-gutters align-items-center">
+          <div class="col-auto">
+            <i class="fa fa-search text-body" aria-hidden="true"></i>
+          </div>
+          <div class="col">
+            <%= form.label 'q', 'Search:', class: 'sr-only' %>
+            <%= form.text_field :q, id: 'q', value: params[:q], class: "form-control form-control-sm form-control-borderless", placeholder: "Search" %>
+          </div>
+          <div class="col-auto">
+            <%= form.submit 'Search', class: "btn btn-small btn-success" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
     <hr>
     <div class="row">
       <% @plant_guides.each do |plant_guide| %>
@@ -16,5 +34,5 @@
 </div>
 
 <% if user_signed_in? %>
-  <%= link_to 'New Plant Guide', new_plant_guide_path %>
+<%= link_to 'New Plant Guide', new_plant_guide_path %>
 <% end -%>
